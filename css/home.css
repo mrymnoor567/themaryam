@@ -1,0 +1,322 @@
+/* GLOBALS */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f6f6f6;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Text Selection Color */
+::selection {
+  background-color: #810576;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #810576;
+  color: #ffffff;
+}
+
+
+/* GLOBAL FADE + SLIDE ANIMATION */
+.fade-up {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-25px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(25px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease-out;
+}
+
+.fade-scale.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* LOGO */
+.home-logo {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    z-index: 10;
+}
+
+.home-logo img {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+/* HOME SECTION */
+.home-section {              
+    padding: 80px 40px;
+    background: #f6f6f6;
+    position: sticky;
+    overflow: hidden;           
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* HOME WRAPPER CENTERING */
+.home-wrapper {
+    flex: 1;                         
+    display: flex;
+    flex-direction: column;
+    justify-content: center;         
+    align-items: center;            
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* SUBTITLE */
+.home-subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    padding-left: 0px;
+    margin-bottom: -20px;
+    color:  #292929;
+}
+
+/* TITLE */
+.home-title {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0e1111;
+    position: relative;
+}
+
+.home-title span {
+    color: #810576;
+    text-shadow: 0 0 18px rgb(129, 5, 118)
+}
+
+/* DESCRIPTION */
+.home-description {
+    margin-top: 0px;
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.9;
+    text-align: center;
+    color:  #292929;
+}
+
+/*CARD STYLE WITH UNIVERSE.IO EFFECT */
+.home-btn {
+    position: relative;
+    padding: 18px 38px;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #810576;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.7s;
+    text-shadow: 3px 5px 2px #8c0032;
+}
+
+.home-btn::after {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background: #CC0055;
+    left: 12px;
+    bottom: 0;
+    translate: 0 100%;
+    border-radius: 8px;
+    z-index: -1;
+    transition: all 0.7s;
+}
+
+.home-btn:hover::after {
+    scale: 300;
+}
+
+.home-btn:hover {
+    text-shadow: 2px 2px 2px ;
+}
+
+.home-buttons {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 25px 40px;
+}
+
+/* soial icons WRAPPER */
+.home-socials-3d {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding-bottom: 40px;
+}
+
+.home-socials-3d li {
+    list-style: none;
+}
+
+/* Base Box */
+.home-socials-3d li a {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background: #0e1111;
+    transform: perspective(100px) rotate(-30deg) skew(25deg) translate(0, 0);
+    transition: all 0.6s ease;
+    box-shadow: -20px 20px 10px rgba(42, 41, 41, 0.6);
+    border-radius: 10px;
+}
+
+/* Icon */
+.home-socials-3d li a .fa-brands {
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 80px;
+    transition: 0.5s;
+}
+
+/* 3D SIDES */
+.home-socials-3d li a::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #011315;
+    transition: 0.4s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+.home-socials-3d li a::after {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: -11px;
+    height: 20px;
+    width: 100%;
+    background: #ffffff;
+    transition: 0.4s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+/* HOVER ANIMATION */
+.home-socials-3d li a:hover {
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(18px, -18px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.6);
+}
+
+/* Icon hover */
+.home-socials-3d li:hover .fa-brands {
+    color: #021C1E;
+}
+
+/* CUSTOM COLORS ON HOVER */
+
+/* 1 - LinkedIn */
+.home-socials-3d li:hover .ln {
+    background: #810576;
+}
+.home-socials-3d li:hover .ln::before,
+.home-socials-3d li:hover .ln::after {
+    background: #810576;
+}
+
+/* 2 - X (Twitter) */
+.home-socials-3d li:hover .x {
+    background:  #CC0055;
+}
+.home-socials-3d li:hover .x::before,
+.home-socials-3d li:hover .x::after {
+    background: #CC0055;
+}
+
+/* 3 - GitHub */
+.home-socials-3d li:hover .git {
+    background:  #810576;
+}
+.home-socials-3d li:hover .git::before,
+.home-socials-3d li:hover .git::after {
+    background:  #810576;
+}
+
+/* 4 - WordPress */
+.home-socials-3d li:hover .wp {
+    background: #CC0055;
+}
+.home-socials-3d li:hover .wp::before,
+.home-socials-3d li:hover .wp::after {
+    background: #CC0055;
+}
+
+
+/* Responsive */
+@media (max-width: 650px) {
+    .home-socials-3d {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .home-socials-3d li a {
+        width: 65px;
+        height: 65px;
+    }
+
+    .home-socials-3d li a .fa-brands {
+        font-size: 30px;
+        line-height: 65px;
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .home-title { font-size: 38px; }
+    .home-wrapper { text-align: center; }
+}

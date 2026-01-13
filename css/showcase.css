@@ -1,0 +1,248 @@
+/* WORK SECTION */
+.work-section {
+  background: #0e1111;
+  padding: 80px 40px;
+}
+
+.work-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section Title */
+.work-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.work-header h2 {
+  color: #f6f6f6;
+  font-size: 35px;
+  font-family: 'Monstrate', sans-serif;
+  margin-bottom: 12px;
+}
+
+.work-header p {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Description */
+.video-desc {
+  margin: 25px 0;
+  padding: 20px;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* Swipe Button */
+.swipe-btn {
+  position: relative;
+  margin: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid #810576;
+  color: #fff;
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+.swipe-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.swipe-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #810576;
+  transform: translateX(-100%);
+  transition: 0.4s ease;
+}
+
+.swipe-btn:hover::before {
+  transform: translateX(0);
+}
+
+
+/* Grid Layout */
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* LEFT: Video */
+.work-video {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.work-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT: Vertical Image Cards */
+.work-images {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.work-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.work-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.work-card:hover {
+  background: rgba(129,5,118,0.15);
+  transform: translateY(-6px);
+}
+
+/* MEDIA QUERY: Responsive */
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-video {
+    height: 260px;
+  }
+}
+
+/*-- ================= CONTACT SECTION ================= */
+
+
+#contact {
+  background: #0e1111;
+  padding: 80px 40px;
+  color: #f6f6f6;
+}
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+}
+
+.contact-text h2 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.contact-text span {
+  font-weight: 300;
+}
+
+.contact-text p {
+  margin-top: 20px;
+  max-width: 420px;
+  opacity: 0.85;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding: 10px 0;
+  color: #f6f6f6;
+  width: 100%;
+  font-size: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+/* SWIPE BUTTON */
+.swipe-btn {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  padding: 14px 36px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid #810576;
+  color: #f6f6f6;
+  cursor: pointer;
+}
+
+.swipe-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.swipe-btn::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #810576;
+  transition: 0.4s ease;
+}
+
+.swipe-btn:hover::before {
+  left: 0;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-text h2 {
+    font-size: 36px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #contact {
+    padding: 80px 20px;
+  }
+}

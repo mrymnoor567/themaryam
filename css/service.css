@@ -1,0 +1,95 @@
+/* SERVICES SECTION */
+.services-section {
+  background: 	#0e1111;
+  padding: 80px 40px;
+}
+
+.services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-title {
+  text-align: center;
+  color: #f6f6f6;
+  font-size: 35px;
+  margin-bottom: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.service-card {
+  background: rgba(14,17,17, 0.08); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 24px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #f6f6f6;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #f6f6f6
+}
+
+/* Bottom gradient line */
+.service-line {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 20px;
+  height: 3px;
+  background: linear-gradient(to right, #810576, #CC0055);
+  border-radius: 5px;
+}
+
+/* Hover */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Fade Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-section {
+    padding: 50px 20px;
+  }
+}
