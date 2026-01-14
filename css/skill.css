@@ -71,14 +71,18 @@
   .skills-wrapper {
     flex-direction: column;
     gap: 25px;
+   padding: 40px 20px;
+   text-align: center;
+    }
+
   }
 
   .skills-box {
     min-width: 100%;
-    padding: 20px;
+    padding: 20px 10px;
   }
 
   .bar {
     height: 18px;
   }
-}
+

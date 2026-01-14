@@ -295,28 +295,84 @@ body {
     background: #CC0055;
 }
 
+/* ================= HOME SECTION – MOBILE FIX ================= */
+@media (max-width: 768px) {
 
-/* Responsive */
-@media (max-width: 650px) {
-    .home-socials-3d {
-        flex-wrap: wrap;
-        gap: 25px;
-    }
+  section {
+    padding: 60px 10px !important;
+  }
 
-    .home-socials-3d li a {
-        width: 65px;
-        height: 65px;
-    }
-
-    .home-socials-3d li a .fa-brands {
-        font-size: 30px;
-        line-height: 65px;
-    }
+  .container,
+  .wrapper {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
 
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
-    .home-title { font-size: 38px; }
-    .home-wrapper { text-align: center; }
+
+    .home-wrapper {
+        text-align: center;
+    }
+
+    .home-logo {
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    z-index: 10;
+}
+
+    .home-logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+    .home-title {
+        font-size: 32px;
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    .home-subtitle,
+    .home-intro {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Buttons */
+    .home-buttons {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 30px;
+        display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    }
+
+    .home-buttons a,
+    .home-buttons button {
+        width: 100%;
+         padding: 18px 38px;
+        font-size: 14px;
+    }
+
+    /* Social Icons */
+    .home-socials-3d {
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    .home-socials-3d li a {
+        width: 58px;
+        height: 58px;
+    }
+
+    .home-socials-3d li a .fa-brands {
+        font-size: 26px;
+        line-height: 58px;
+    }
 }
